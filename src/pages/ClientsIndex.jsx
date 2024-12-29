@@ -3,7 +3,7 @@ import { fetchClients } from '../services/dataServices';
 import { useNavigate } from 'react-router-dom';
 
 const ClientsIndex = (props) => {
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
     const [clients, setClients] = useState([]);
 
     useEffect(() => {
@@ -28,27 +28,33 @@ const ClientsIndex = (props) => {
             <main>
                 <section>
                     <h1>Clients:</h1>
-                    {clients.map((client) => {
-                        return(
-                            <>
-                            <h2>Client Name: {client.client_name}</h2>
-                            <h3>Location: {client.location}</h3>
-                            <h3>Phone No: {client.phone}</h3>
-                            <h3>Gate Code: {client.gate_code}</h3>
-                            <h3>Coments: {client.coments}</h3>
-                            <button onClick={() => handleClick(client.url)}>Edit</button>
-                            </>
-                        )
-                    })}
+                    <table>
+                        <tr>
+                            <th>Client Name</th>
+                            <th>Location</th>
+                            <th>Tap to see entry</th>
+                        </tr>
+                        {clients.map((client, i) => {
+                            return (
+                                <>
+                                    <tr key={i}>
+                                        <td>{client.client_name}</td>
+                                        <td>{client.location}</td>
+                                        <td><button onClick={() => handleClick(client.url)}>Show Client</button></td>
+                                    </tr>
+                                </>
+                            )
+                        })}
+                    </table>
                 </section>
             </main>
         )
     }
     const loading = () => {
-        return(<h2>Loading...</h2>)
+        return (<h2>Loading...</h2>)
     }
 
-    return(
+    return (
         <div>
             {clients ? loaded() : loading()}
         </div>

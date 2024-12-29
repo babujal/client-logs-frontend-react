@@ -43,3 +43,32 @@ export const getClient = async (url) => {
         return err
     }
 }
+
+export const editClient = async (formdata, url) => {
+    try {
+        const response = await axios.put(`${url}`, formdata, {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`
+            }
+        });
+        return console.log('Edited Item', response.data)
+    } catch (err) {
+        console.log('Error:', err);
+        return err
+    }
+}
+
+export const deleteClient = async (url) => {
+    try {
+        const response = await axios.delete(`${url}`, {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem('token')}`
+            }
+        });
+        console.log(response.data)
+        return response.data
+    } catch (err) {
+        console.log('Error:', err);
+        return err
+    }
+}

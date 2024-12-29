@@ -6,6 +6,7 @@ import SignIn from './pages/SignIn';
 import ClientsIndex from './pages/ClientsIndex';
 import CreateClient from './pages/CreateClient';
 import ShowClient from './pages/ShowClient';
+import EditClient from './pages/EditClient';
 import { getUser } from './services/authServices';
 import NavBar from './components/Navbar';
 
@@ -30,6 +31,7 @@ function App() {
           element={token ?  <ClientsIndex setClientUrl={setClientUrl}/>: <h1>Sign in or Sign up</h1>}
         />
         <Route path='show' element={< ShowClient clientUrl={clientUrl}/>} />
+        <Route path='edit' element={< EditClient clientUrl={clientUrl}/>} />
         <Route path='create' element={< CreateClient />} />
         <Route path='signup' element={<SignUp setToken={setToken} />} />
         <Route path='signin' element={<SignIn setToken={setToken} />} />

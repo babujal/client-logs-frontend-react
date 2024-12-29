@@ -31,7 +31,7 @@ const ShowClient = (props) => {
                             <h3>Phone No: {client.phone}</h3>
                             <h3>Gate Code: {client.gate_code}</h3>
                             <h3>Coments: {client.coments}</h3>
-                            <button onClick={() => navigate(`/${client.url}`)}>Edit</button>
+                            <button onClick={() => navigate(`/edit`)}>Edit</button>
                             </>
                 </section>
             </main>
