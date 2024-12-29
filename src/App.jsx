@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import SignUp from './components/SignUp';
-import SignIn from './components/SignIn';
-import CreateClient from './components/CreateClient';
-import ShowClient from './components/ShowClient';
+import SignUp from './pages/SignUp';
+import SignIn from './pages/SignIn';
+import ClientsIndex from './pages/ClientsIndex';
+import CreateClient from './pages/CreateClient';
+import ShowClient from './pages/ShowClient';
 import { getUser } from './services/authServices';
 import NavBar from './components/Navbar';
-import ClientsIndex from './components/clientsIndex';
-
 
 function App() {
   const [token, setToken] = useState(getUser())
