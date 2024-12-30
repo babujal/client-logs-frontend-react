@@ -19,7 +19,7 @@ export const signUp = async (formdata) => {
     }
 }
 
-export const getUser = () => {
+export const getToken = () => {
     const token = localStorage.getItem('token')
     console.log('Token from authServ:', token)
     if(!token) return null;

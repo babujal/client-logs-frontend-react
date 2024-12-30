@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { editClient } from "../services/dataServices";
 import { getClient } from "../services/dataServices";
+import { deleteClient } from "../services/dataServices";
 
 const EditClient = (props) => {
     const navigate = useNavigate();
+    const clientUrl = props.clientUrl
 
     const [client, setClient] = useState([]);
     
@@ -15,8 +17,6 @@ const EditClient = (props) => {
         }
         loadData()
     }, []);
-
-    const clientUrl = props.clientUrl
 
     useEffect(() => {
         console.log('Client to edit:', client)
@@ -43,6 +43,11 @@ const EditClient = (props) => {
         } catch (err) {
             setErrMessage(err.message)
         }
+    }
+
+    const handleClick = () => {
+        deleteClient(clientUrl)
+        navigate('/')
     }
 
     return (
@@ -98,6 +103,7 @@ const EditClient = (props) => {
                 </div>
                 <div>
                     <button type="submit">Submit</button>
+                    <button onClick={() => handleClick()}>Delete</button>
                     <button onClick={() => navigate('/')}>Cancel</button>
                 </div>
             </form>

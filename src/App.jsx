@@ -7,11 +7,11 @@ import ClientsIndex from './pages/ClientsIndex';
 import CreateClient from './pages/CreateClient';
 import ShowClient from './pages/ShowClient';
 import EditClient from './pages/EditClient';
-import { getUser } from './services/authServices';
+import { getToken } from './services/authServices';
 import NavBar from './components/Navbar';
 
 function App() {
-  const [token, setToken] = useState(getUser())
+  const [token, setToken] = useState(getToken())
   const [clientUrl, setClientUrl] = useState()
 
   useEffect(() => {

@@ -30,7 +30,7 @@ const ShowClient = (props) => {
                             <h3>Location: {client.location}</h3>
                             <h3>Phone No: {client.phone}</h3>
                             <h3>Gate Code: {client.gate_code}</h3>
-                            <h3>Coments: {client.coments}</h3>
+                            <h3>Comments: {client.coments}</h3>
                             <button onClick={() => navigate(`/edit`)}>Edit</button>
                             </>
                 </section>
