@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { fetchClients } from '../services/dataServices';
 import { useNavigate } from 'react-router-dom';
+import './ClientsIndex.css'
 
 const ClientsIndex = (props) => {
     const navigate = useNavigate();

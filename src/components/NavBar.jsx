@@ -1,46 +1,32 @@
 import { Link } from "react-router-dom";
 import { signOut } from "../services/authServices";
+import './NavBar.css'
 
 const NavBar = (props) => {
     return (
         <nav>
-            <ul>
                 {props.token ?
                     <>
-                        <li>
-                            <Link onClick={() => {
-                                signOut()
-                                props.setToken(null)
-                            }}>
-                                sign out
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to='/create'>
-                                Create Client
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to='/'>
-                                Home
-                            </Link>
-                        </li>
+                        <Link to='/create'>
+                            <button className="navBtn">Create Client</button>
+                        </Link>
+                        <Link onClick={() => {
+                            signOut()
+                            props.setToken(null)
+                        }}>
+                            <button className="navBtn">Sign Out</button>
+                        </Link>
                     </>
                     :
                     <>
-                        <li>
-                            <Link to='/signin'>
-                                sign in
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to='/signup'>
-                                sign up
-                            </Link>
-                        </li>
+                        <Link to='/signin'>
+                            <button>Sign In</button>
+                        </Link>
+                        <Link to='/signup'>
+                            <button>Sign Up</button>
+                        </Link>
                     </>
                 }
-            </ul>
         </nav>
     )
 }

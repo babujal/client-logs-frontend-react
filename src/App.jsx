@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './App.css';
+// import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
