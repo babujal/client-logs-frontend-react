@@ -26,29 +26,26 @@ const ClientsIndex = (props) => {
 
     const loaded = () => {
         return (
-            <main>
-                <section>
-                    <h1>Clients:</h1>
-                    <table>
-                        <tr>
-                            <th>Client Name</th>
-                            <th>Location</th>
-                            <th>Tap to see entry</th>
-                        </tr>
-                        {clients.map((client, i) => {
-                            return (
-                                <>
-                                    <tr key={i}>
-                                        <td>{client.client_name}</td>
-                                        <td>{client.location}</td>
-                                        <td><button onClick={() => handleClick(client.url)}>Show Client</button></td>
-                                    </tr>
-                                </>
-                            )
-                        })}
-                    </table>
-                </section>
-            </main>
+            <section>
+                <table>
+                    <tr>
+                        <th>Client Name</th>
+                        <th>Location</th>
+                        <th>Tap to show</th>
+                    </tr>
+                    {clients.map((client, i) => {
+                        return (
+                            <>
+                                <tr key={i}>
+                                    <td>{client.client_name}</td>
+                                    <td>{client.location}</td>
+                                    <td className='showLink'><button className='showBtn' onClick={() => handleClick(client.url)}>Details</button></td>
+                                </tr>
+                            </>
+                        )
+                    })}
+                </table>
+            </section>
         )
     }
     const loading = () => {

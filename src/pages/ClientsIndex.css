@@ -1,3 +1,21 @@
 td {
     border-bottom: rgba(201, 201, 216, 0.5) solid;
 }
+
+th {
+    border-bottom: rgba(201, 201, 216, 0.5) solid;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+/* .showLink {
+    display: flex;
+    justify-content: center;
+} */
+
+.showBtn {
+    background-color: rgb(43, 44, 45);
+}

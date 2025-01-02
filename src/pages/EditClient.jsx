@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { editClient } from "../services/dataServices";
 import { getClient } from "../services/dataServices";
 import { deleteClient } from "../services/dataServices";
+import './EditClient.css'
 
 const EditClient = (props) => {
     const navigate = useNavigate();
@@ -51,13 +52,13 @@ const EditClient = (props) => {
     }
 
     return (
-        <main>
-            <h1>Sign Up</h1>
+        <main className='page'>
+            <h1>Edit</h1>
             <p>{errMessage}</p>
 
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="editForm">
                 <div>
-                    Client Name:
+                    Client Name: <br/>
                     <input
                         type="text"
                         name="client_name"
@@ -66,7 +67,7 @@ const EditClient = (props) => {
                     />
                 </div>
                 <div>
-                    Phone:
+                    Phone: <br/>
                     <input
                         type="text"
                         name="phone"
@@ -75,7 +76,7 @@ const EditClient = (props) => {
                     />
                 </div>
                 <div>
-                    Location Address:
+                    Location Address: <br/>
                     <input
                         type="text"
                         name="location"
@@ -84,7 +85,7 @@ const EditClient = (props) => {
                     />
                 </div>
                 <div>
-                    Gate's Code:
+                    Gate's Code: <br/>
                     <input
                         type="text"
                         name="gate_code"
@@ -93,20 +94,20 @@ const EditClient = (props) => {
                     />
                 </div>
                 <div>
-                    Coments:
-                    <input
+                    Coments: <br/>
+                    <textarea
                         type="text"
                         name="coments"
                         value={client.coments}
                         onChange={handleChange}
                     />
                 </div>
-                <div>
-                    <button type="submit">Submit</button>
+                <div className="formFooter">
+                    <button type="submit" onClick={() => navigate('/')}>Submit</button>
                     <button onClick={() => handleClick()}>Delete</button>
-                    <button onClick={() => navigate('/')}>Cancel</button>
                 </div>
             </form>
+            <button className="btn" onClick={() => navigate('/')}>Back</button>
         </main>
     )
 }

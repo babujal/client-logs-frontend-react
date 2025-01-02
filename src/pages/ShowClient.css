@@ -1,0 +1,37 @@
+.card {
+    /* border: rgb(49, 47, 47)  solid; */
+    /* padding: 20px; */
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.cardHeadder {
+    width: 100%;
+    background-color: rgb(29, 28, 32);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.cardBody {
+    padding: 10px;
+}
+
+.cardFooter {
+    display: flex;
+    justify-content: center;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardBtn {
+    margin: 20px 5px;
+}
+
+.btn {
+    margin: 50px 5px;
+}

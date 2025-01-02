@@ -36,7 +36,7 @@ const CreateClient = (props) => {
 
     return (
         <main>
-            <h1>Sign Up</h1>
+            <h1>Register a client</h1>
             <p>{errMessage}</p>
 
             <form onSubmit={handleSubmit}>
