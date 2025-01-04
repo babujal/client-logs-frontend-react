@@ -26,13 +26,13 @@ const ShowClient = (props) => {
             <main className='page'>
                     <div className='card'>
                         <div className='cardHeadder'>
-                            <h2>{client.client_name} location:</h2>
-                            <h3>Location: {client.location}</h3>
+                            <h2>{client.client_name}</h2>
+                            <h3>Location:<br/> {client.location}</h3>
                         </div>
                         <div className='cardBody'>
-                            <h3>Phone No: {client.phone}</h3>
-                            <h3>Gate Code: {client.gate_code}</h3>
-                            <h3>Comments: {client.coments}</h3>
+                            <h3>Phone No:<br/> {client.phone}</h3>
+                            <h3>Gate Code:<br/> {client.gate_code}</h3>
+                            <h3>Comments:<br/> {client.coments}</h3>
                         </div>
                         <div className='cardFooter'>
                         <button className="cardBtn" onClick={() => navigate(`/edit`)}>Edit</button>
