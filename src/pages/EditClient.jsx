@@ -45,7 +45,9 @@ const EditClient = (props) => {
     }
 
     const handleClick = () => {
+        console.log('Delete clicked, events below')
         deleteClient(clientUrl)
+        setClient(null)
         navigate('/')
     }
 

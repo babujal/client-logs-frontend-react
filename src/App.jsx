@@ -33,7 +33,7 @@ function App() {
           element={token ? <ClientsIndex setClientUrl={setClientUrl} /> : < NoTokenMessage />}
         />
         <Route path='show' element={< ShowClient clientUrl={clientUrl} />} />
-        <Route path='edit' element={< EditClient clientUrl={clientUrl} />} />
+        <Route path='edit' element={< EditClient clientUrl={clientUrl} setClientUrl={setClientUrl}/>} />
         <Route path='create' element={< CreateClient />} />
         <Route path='signup' element={<SignUp setToken={setToken} />} />
         <Route path='signin' element={<SignIn setToken={setToken} />} />

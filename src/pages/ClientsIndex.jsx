@@ -8,16 +8,16 @@ const ClientsIndex = (props) => {
     const [clients, setClients] = useState([]);
 
     useEffect(() => {
-        console.log('Clients found:', clients)
-    }, [clients]);
-
-    useEffect(() => {
         const loadData = async () => {
             const data = await (fetchClients())
             setClients(data)
         }
         loadData()
     }, []);
+
+    useEffect(() => {
+        console.log('Clients found:', clients)
+    }, [clients]);
 
     const handleClick = (url) => {
         props.setClientUrl(url)
