@@ -3,6 +3,7 @@ nav {
     justify-content: center;
     margin-bottom: 40px;
     background-color: rgb(67, 67, 66);
+    padding-top: 40;
 }
 
 .navBtn {
@@ -10,5 +11,8 @@ nav {
 }
 
 .welcomeMsg {
-    margin-bottom: 40px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    height: 20%;
 }
