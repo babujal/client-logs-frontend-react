@@ -9,7 +9,7 @@ import EditClient from './pages/EditClient';
 import NoTokenMessage from './pages/NoTokenMessage';
 import HeaderImage from './components/Header';
 import { getToken } from './services/authServices';
-import NavBar from './components/Navbar';
+import NavBar from './components/NavBar';
 
 function App() {
   const [token, setToken] = useState(getToken())
