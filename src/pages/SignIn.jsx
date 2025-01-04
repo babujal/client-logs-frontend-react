@@ -48,7 +48,7 @@ const SignIn = (props) => {
 
             <form onSubmit={handleSubmit}>
                 <div>
-                    Username:
+                    Username:<br/>
                     <input
                         type="text"
                         name="username"
@@ -57,7 +57,7 @@ const SignIn = (props) => {
                     />
                 </div>
                 <div>
-                    Password:
+                    Password:<br/>
                     <input
                         type="text"
                         name="password"

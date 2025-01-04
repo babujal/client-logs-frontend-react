@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { signUp } from "../services/authServices";
+import './SignUp.css'
 const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 const SignUp = (props) => {
@@ -29,7 +30,7 @@ const SignUp = (props) => {
             props.setToken(userResponse.data);
             //navigate the user to the logged page
             navigate('/')
-        }catch(err){
+        } catch (err) {
             setErrMessage(err.message)
         }
     }
@@ -48,12 +49,14 @@ const SignUp = (props) => {
 
     return (
         <main>
-            <h1>Sign Up</h1>
-            <p>{errMessage}</p>
+            <div className="compHeader">
+                <h2>Sign Up</h2>
+                <p>{errMessage}</p>
+            </div>
 
             <form onSubmit={handleSubmit}>
                 <div>
-                    Username:
+                    Username:<br />
                     <input
                         type="text"
                         name="username"
@@ -62,7 +65,7 @@ const SignUp = (props) => {
                     />
                 </div>
                 <div>
-                    Password:
+                    Password:<br />
                     <input
                         type="text"
                         name="password"
@@ -71,7 +74,7 @@ const SignUp = (props) => {
                     />
                 </div>
                 <div>
-                    Confirm Password:
+                    Confirm Password:<br />
                     <input
                         type="text"
                         name="passwordConf"

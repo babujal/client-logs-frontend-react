@@ -28,22 +28,24 @@ const ClientsIndex = (props) => {
         return (
             <section>
                 <table>
-                    <tr>
-                        <th>Client Name</th>
-                        <th>Location</th>
-                        <th>Tap to show</th>
-                    </tr>
-                    {clients.map((client, i) => {
-                        return (
-                            <>
-                                <tr key={i}>
-                                    <td>{client.client_name}</td>
-                                    <td>{client.location}</td>
-                                    <td className='showLink'><button className='showBtn' onClick={() => handleClick(client.url)}>Details</button></td>
-                                </tr>
-                            </>
-                        )
-                    })}
+                    <tbody>
+                        <tr>
+                            <th>Client Name</th>
+                            <th>Location</th>
+                            <th>Tap to show</th>
+                        </tr>
+                        {clients.map((client, i) => {
+                            return (
+                                <>
+                                    <tr key={i}>
+                                        <td>{client.client_name}</td>
+                                        <td>{client.location}</td>
+                                        <td className='showLink'><button className='showBtn' onClick={() => handleClick(client.url)}>Details</button></td>
+                                    </tr>
+                                </>
+                            )
+                        })}
+                    </tbody>
                 </table>
             </section>
         )
