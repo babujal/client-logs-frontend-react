@@ -1,6 +1,8 @@
 nav {
     display: flex;
     justify-content: center;
+    margin-bottom: 40px;
+    background-color: rgb(67, 67, 66);
 }
 
 .navBtn {
