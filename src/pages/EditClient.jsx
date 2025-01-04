@@ -36,10 +36,8 @@ const EditClient = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            //call our backend to create the user and save the token
             const postResponse = await editClient(client, clientUrl);
             console.log('Created Client:', postResponse.data)
-            //navigate the user to the logged page
             navigate('/show')
         } catch (err) {
             setErrMessage(err.message)
