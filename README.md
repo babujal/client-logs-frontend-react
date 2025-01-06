@@ -35,11 +35,11 @@ You can try the app [here](https://clientslogs.onrender.com).
 
 ## Technologies Used
 
-# Backend:
+### Backend:
 - Python and Django for server-side logic and API development.
 - Data stored in a PostgreSQL database hosted on Neon.com.
 
-# Frontend:
+### Frontend:
 - React (with Vite) for a responsive and dynamic user interface.
 - JavaScript for functionality and interactivity.
 
@@ -53,7 +53,7 @@ Planned future enhancements include:
 
 ## To run this project locally, follow these steps:
 
-# Backend:
+### Backend:
 - Clone the Repository:
 - Create a virtual-enviroment running: python3 -m venv venv
 - Activate your virtual enviroment runing: source venv/bin/activate
@@ -62,7 +62,7 @@ Planned future enhancements include:
 - Run migrations.
 - Run the server: python manage.py runserver
 
-# Frontend:
+### Frontend:
 - After cloning run: npm install
 - create your .env with the variable named VITE_BASE_URL=(your connection string)
 - Run: npm run dev
